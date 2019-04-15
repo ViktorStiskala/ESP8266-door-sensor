@@ -1,0 +1,136 @@
+EESchema Schematic File Version 4
+LIBS:Door-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title "Vermicompost board"
+Date "2019-02-02"
+Rev ""
+Comp "Viktor Stískala"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5450 4050 2    50   Output ~ 0
+ADC_OUT
+Text HLabel 5750 3600 0    50   Input ~ 0
+EN
+$Comp
+L Transistor_BJT:BC817 Q202
+U 1 1 5CB2A271
+P 6350 3600
+F 0 "Q202" H 6541 3646 50  0000 L CNN
+F 1 "BC817" H 6541 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6550 3525 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 6350 3600 50  0001 L CNN
+	1    6350 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS83P Q201
+U 1 1 5CB2A272
+P 5400 3300
+F 0 "Q201" H 5606 3254 50  0000 L CNN
+F 1 "BSS83P" H 5606 3345 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5600 3225 50  0001 L CIN
+F 3 "http://www.farnell.com/datasheets/1835997.pdf" H 5400 3300 50  0001 L CNN
+	1    5400 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 3100 5300 2900
+Wire Wire Line
+	6450 3300 5600 3300
+Wire Wire Line
+	5300 3500 5300 3650
+$Comp
+L Device:R R201
+U 1 1 5C5485D2
+P 5300 3800
+F 0 "R201" H 5370 3846 50  0000 L CNN
+F 1 "15K" H 5370 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5230 3800 50  0001 C CNN
+F 3 "~" H 5300 3800 50  0001 C CNN
+	1    5300 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3950 5300 4050
+$Comp
+L Device:R R202
+U 1 1 5C548720
+P 5300 4300
+F 0 "R202" H 5370 4346 50  0000 L CNN
+F 1 "4.3K" H 5370 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5230 4300 50  0001 C CNN
+F 3 "~" H 5300 4300 50  0001 C CNN
+	1    5300 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4050 5450 4050
+Connection ~ 5300 4050
+Wire Wire Line
+	5300 4050 5300 4150
+$Comp
+L Device:R R203
+U 1 1 5C54973B
+P 5900 3600
+F 0 "R203" V 6107 3600 50  0000 C CNN
+F 1 "2.2K" V 6016 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5830 3600 50  0001 C CNN
+F 3 "~" H 5900 3600 50  0001 C CNN
+	1    5900 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 3300 6450 3400
+Wire Wire Line
+	6150 3600 6050 3600
+$Comp
+L Device:R R204
+U 1 1 5C549E79
+P 6450 3100
+F 0 "R204" H 6520 3146 50  0000 L CNN
+F 1 "22K" H 6520 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6380 3100 50  0001 C CNN
+F 3 "~" H 6450 3100 50  0001 C CNN
+	1    6450 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2900 6450 2900
+Wire Wire Line
+	6450 2950 6450 2900
+Connection ~ 6450 2900
+Wire Wire Line
+	6450 2900 6700 2900
+Wire Wire Line
+	6450 3250 6450 3300
+Connection ~ 6450 3300
+Wire Wire Line
+	5300 4450 5300 4550
+Wire Wire Line
+	5300 4550 6450 4550
+Wire Wire Line
+	6450 3800 6450 4550
+Connection ~ 6450 4550
+Wire Wire Line
+	6450 4550 6650 4550
+$Comp
+L power:+3V3 #PWR0201
+U 1 1 5CB3FF55
+P 6700 2900
+F 0 "#PWR0201" H 6700 2750 50  0001 C CNN
+F 1 "+3V3" H 6715 3073 50  0000 C CNN
+F 2 "" H 6700 2900 50  0001 C CNN
+F 3 "" H 6700 2900 50  0001 C CNN
+	1    6700 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 6650 4550 2    50   Input ~ 0
+GBAT
+$EndSCHEMATC

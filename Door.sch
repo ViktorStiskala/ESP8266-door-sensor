@@ -1,0 +1,546 @@
+EESchema Schematic File Version 4
+LIBS:Door-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "Door sensor"
+Date "2019-04-14"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 6250 2300 700  450 
+U 5CB299D3
+F0 "battery" 50
+F1 "battery.sch" 50
+F2 "ADC_OUT" O L 6250 2600 50 
+F3 "EN" I L 6250 2450 50 
+$EndSheet
+$Comp
+L RF_Module:ESP-12F U101
+U 1 1 5C4F6225
+P 2900 3700
+F 0 "U101" H 2900 4700 50  0000 C CNN
+F 1 "ESP-12F" H 2900 4600 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 2900 3700 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 2550 3800 50  0001 C CNN
+	1    2900 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J101
+U 1 1 5C4FA37C
+P 5200 2600
+F 0 "J101" H 5280 2642 50  0000 L CNN
+F 1 "Programming" H 5280 2551 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5200 2600 50  0001 C CNN
+F 3 "~" H 5200 2600 50  0001 C CNN
+	1    5200 2600
+	1    0    0    -1  
+$EndComp
+Text Label 3500 3200 0    50   ~ 0
+TX
+Text Label 3500 3400 0    50   ~ 0
+RX
+Text Label 5000 2600 2    50   ~ 0
+TX
+Text Label 3500 3100 0    50   ~ 0
+GP0
+Text Label 3500 3300 0    50   ~ 0
+GP2
+Wire Wire Line
+	2900 2900 3250 2900
+$Comp
+L power:GND #PWR0102
+U 1 1 5C4FACCF
+P 3250 4500
+F 0 "#PWR0102" H 3250 4250 50  0001 C CNN
+F 1 "GND" H 3255 4327 50  0000 C CNN
+F 2 "" H 3250 4500 50  0001 C CNN
+F 3 "" H 3250 4500 50  0001 C CNN
+	1    3250 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4400 3250 4400
+$Comp
+L Device:R R101
+U 1 1 5C4F67DE
+P 5050 3550
+F 0 "R101" V 4843 3550 50  0000 C CNN
+F 1 "10K" V 4934 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 3550 50  0001 C CNN
+F 3 "~" H 5050 3550 50  0001 C CNN
+	1    5050 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 3550 5400 3550
+Wire Wire Line
+	5400 3550 5400 3400
+Wire Wire Line
+	4900 3550 4750 3550
+Text Label 4750 3550 2    50   ~ 0
+GP0
+$Comp
+L Device:R R102
+U 1 1 5C4F6AB4
+P 5050 3850
+F 0 "R102" V 4843 3850 50  0000 C CNN
+F 1 "10K" V 4934 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 3850 50  0001 C CNN
+F 3 "~" H 5050 3850 50  0001 C CNN
+	1    5050 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 3850 5400 3850
+Wire Wire Line
+	5400 3850 5400 3550
+Connection ~ 5400 3550
+Wire Wire Line
+	4900 3850 4750 3850
+Text Label 4750 3850 2    50   ~ 0
+GP2
+$Comp
+L Switch:SW_Push SW101
+U 1 1 5C4F6E1D
+P 7500 3450
+F 0 "SW101" H 7500 3265 50  0000 C CNN
+F 1 "FLASH" H 7500 3356 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7500 3650 50  0001 C CNN
+F 3 "" H 7500 3650 50  0001 C CNN
+	1    7500 3450
+	-1   0    0    1   
+$EndComp
+Text Label 7300 3450 2    50   ~ 0
+GP0
+$Comp
+L power:GND #PWR0108
+U 1 1 5C4F76F7
+P 7850 3450
+F 0 "#PWR0108" H 7850 3200 50  0001 C CNN
+F 1 "GND" H 7855 3277 50  0000 C CNN
+F 2 "" H 7850 3450 50  0001 C CNN
+F 3 "" H 7850 3450 50  0001 C CNN
+	1    7850 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3450 7850 3450
+Text Label 3500 4000 0    50   ~ 0
+GP15
+$Comp
+L Device:R R105
+U 1 1 5C4F8396
+P 6200 3550
+F 0 "R105" V 5993 3550 50  0000 C CNN
+F 1 "10K" V 6084 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6130 3550 50  0001 C CNN
+F 3 "~" H 6200 3550 50  0001 C CNN
+	1    6200 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 3550 6350 3550
+Wire Wire Line
+	6050 3550 5900 3550
+Text Label 5900 3850 2    50   ~ 0
+GP15
+$Comp
+L Connector_Generic:Conn_01x02 J102
+U 1 1 5C4FAA17
+P 5550 5200
+F 0 "J102" H 5630 5192 50  0000 L CNN
+F 1 "Battery input" H 5630 5101 50  0000 L CNN
+F 2 "ViktorStiskala:PH_MPT_0,5_2-2,54" H 5550 5200 50  0001 C CNN
+F 3 "~" H 5550 5200 50  0001 C CNN
+	1    5550 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5C4FC24E
+P 5250 5200
+F 0 "#FLG0102" H 5250 5275 50  0001 C CNN
+F 1 "PWR_FLAG" H 5250 5374 50  0000 C CNN
+F 2 "" H 5250 5200 50  0001 C CNN
+F 3 "~" H 5250 5200 50  0001 C CNN
+	1    5250 5200
+	1    0    0    -1  
+$EndComp
+Text Label 2300 3100 2    50   ~ 0
+RST
+Connection ~ 5400 3850
+Text Label 4750 4150 2    50   ~ 0
+RST
+Text Notes 4900 3150 0    50   ~ 0
+Pull ups
+Text Notes 5950 3150 0    50   ~ 0
+Pull downs\n
+Text Notes 5000 4950 0    50   ~ 0
+Battery input
+$Comp
+L Switch:SW_Push SW102
+U 1 1 5C50196A
+P 7500 4000
+F 0 "SW102" H 7500 3815 50  0000 C CNN
+F 1 "RESET" H 7500 3906 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7500 4200 50  0001 C CNN
+F 3 "" H 7500 4200 50  0001 C CNN
+	1    7500 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5C501C9F
+P 7850 4000
+F 0 "#PWR0109" H 7850 3750 50  0001 C CNN
+F 1 "GND" H 7855 3827 50  0000 C CNN
+F 2 "" H 7850 4000 50  0001 C CNN
+F 3 "" H 7850 4000 50  0001 C CNN
+	1    7850 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 4000 7850 4000
+Text Label 7300 4000 2    50   ~ 0
+RST
+$Comp
+L power:GND #PWR0107
+U 1 1 5C50409F
+P 6550 3350
+F 0 "#PWR0107" H 6550 3100 50  0001 C CNN
+F 1 "GND" H 6555 3177 50  0000 C CNN
+F 2 "" H 6550 3350 50  0001 C CNN
+F 3 "" H 6550 3350 50  0001 C CNN
+	1    6550 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R106
+U 1 1 5C5040A5
+P 6200 3850
+F 0 "R106" V 5993 3850 50  0000 C CNN
+F 1 "10K" V 6084 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6130 3850 50  0001 C CNN
+F 3 "~" H 6200 3850 50  0001 C CNN
+	1    6200 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 3850 6350 3850
+Wire Wire Line
+	6050 3850 5900 3850
+Text Label 5900 3550 2    50   ~ 0
+EN_BAT
+Wire Wire Line
+	6550 3550 6550 3850
+Text Notes 4900 2350 0    50   ~ 0
+Programming
+Wire Wire Line
+	6550 3550 6550 3350
+Connection ~ 6550 3550
+$Comp
+L Device:R R103
+U 1 1 5C50C0AD
+P 5050 4150
+F 0 "R103" V 4843 4150 50  0000 C CNN
+F 1 "10K" V 4934 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 4150 50  0001 C CNN
+F 3 "~" H 5050 4150 50  0001 C CNN
+	1    5050 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 4150 5400 4150
+Wire Wire Line
+	4900 4150 4750 4150
+Text Label 3500 4100 0    50   ~ 0
+RST
+Wire Wire Line
+	3250 2900 4100 2900
+Wire Wire Line
+	4100 2900 4100 3550
+Connection ~ 3250 2900
+Wire Wire Line
+	3250 2900 3250 2800
+$Comp
+L Device:C C101
+U 1 1 5C5020FB
+P 4100 3700
+F 0 "C101" H 4215 3746 50  0000 L CNN
+F 1 "100nF" H 4215 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4138 3550 50  0001 C CNN
+F 3 "~" H 4100 3700 50  0001 C CNN
+	1    4100 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4400 4100 4400
+Wire Wire Line
+	4100 4400 4100 3850
+Connection ~ 3250 4400
+Wire Wire Line
+	3250 4400 3250 4500
+Text Label 2300 3500 2    50   ~ 0
+ADC
+Text Label 2300 3300 2    50   ~ 0
+EN
+Text Label 4750 4450 2    50   ~ 0
+EN
+$Comp
+L Device:R R104
+U 1 1 5C54F173
+P 5050 4450
+F 0 "R104" V 4843 4450 50  0000 C CNN
+F 1 "10K" V 4934 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 4450 50  0001 C CNN
+F 3 "~" H 5050 4450 50  0001 C CNN
+	1    5050 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 4450 5400 4450
+Wire Wire Line
+	4900 4450 4750 4450
+NoConn ~ 2300 3700
+NoConn ~ 2300 3800
+NoConn ~ 2300 4100
+NoConn ~ 2300 4200
+Text Notes 7100 3150 0    50   ~ 0
+Programming buttons
+Text Label 3500 3900 0    50   ~ 0
+EN_BAT
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5C580E1F
+P 3250 2800
+F 0 "#PWR0101" H 3250 2650 50  0001 C CNN
+F 1 "+3V3" H 3265 2973 50  0000 C CNN
+F 2 "" H 3250 2800 50  0001 C CNN
+F 3 "" H 3250 2800 50  0001 C CNN
+	1    3250 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0105
+U 1 1 5C5817EB
+P 5400 3400
+F 0 "#PWR0105" H 5400 3250 50  0001 C CNN
+F 1 "+3V3" H 5415 3573 50  0000 C CNN
+F 2 "" H 5400 3400 50  0001 C CNN
+F 3 "" H 5400 3400 50  0001 C CNN
+	1    5400 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 5300 5250 5300
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5C59FB2E
+P 5250 5300
+F 0 "#FLG0103" H 5250 5375 50  0001 C CNN
+F 1 "PWR_FLAG" H 5250 5474 50  0000 C CNN
+F 2 "" H 5250 5300 50  0001 C CNN
+F 3 "~" H 5250 5300 50  0001 C CNN
+	1    5250 5300
+	-1   0    0    1   
+$EndComp
+Connection ~ 5250 5300
+Wire Wire Line
+	5250 5300 5350 5300
+Text Label 5000 2700 2    50   ~ 0
+RX
+Wire Wire Line
+	5000 2500 4700 2500
+Wire Wire Line
+	4700 2500 4700 2450
+Connection ~ 5250 5200
+Wire Wire Line
+	5250 5200 4850 5200
+Wire Wire Line
+	5350 5200 5250 5200
+$Comp
+L power:GND #PWR0103
+U 1 1 5C5D1800
+P 4700 2450
+F 0 "#PWR0103" H 4700 2200 50  0001 C CNN
+F 1 "GND" H 4705 2277 50  0000 C CNN
+F 2 "" H 4700 2450 50  0001 C CNN
+F 3 "" H 4700 2450 50  0001 C CNN
+	1    4700 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 5CB326A2
+P 4850 5300
+F 0 "#PWR0106" H 4850 5150 50  0001 C CNN
+F 1 "+3V3" H 4865 5473 50  0000 C CNN
+F 2 "" H 4850 5300 50  0001 C CNN
+F 3 "" H 4850 5300 50  0001 C CNN
+	1    4850 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 3850 5400 4150
+Text Label 6250 2450 2    50   ~ 0
+EN_BAT
+NoConn ~ 2300 3900
+NoConn ~ 2300 4000
+Connection ~ 5400 4150
+Wire Wire Line
+	5400 4150 5400 4450
+Text Label 6250 2600 2    50   ~ 0
+ADC
+$Sheet
+S 7400 2300 850  450 
+U 5CB41891
+F0 "timer" 50
+F1 "timer.sch" 50
+F2 "DRV_OUT" I R 8250 2450 50 
+F3 "DONE" I L 7400 2600 50 
+F4 "ENABLE" I L 7400 2450 50 
+$EndSheet
+$Comp
+L Switch:SW_Reed SW103
+U 1 1 5CB49925
+P 8600 3600
+AR Path="/5CB49925" Ref="SW103"  Part="1" 
+AR Path="/5CB41891/5CB49925" Ref="SW?"  Part="1" 
+F 0 "SW103" H 8600 3378 50  0000 C CNN
+F 1 "SW_Reed" H 8600 3469 50  0000 C CNN
+F 2 "ViktorStiskala:PH_MPT_0,5_2-2,54" H 8600 3600 50  0001 C CNN
+F 3 "" H 8600 3600 50  0001 C CNN
+	1    8600 3600
+	-1   0    0    1   
+$EndComp
+Text GLabel 4850 5200 0    50   Input ~ 0
+GBAT
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 5CB4D981
+P 8250 3450
+F 0 "#PWR0110" H 8250 3300 50  0001 C CNN
+F 1 "+3V3" H 8265 3623 50  0000 C CNN
+F 2 "" H 8250 3450 50  0001 C CNN
+F 3 "" H 8250 3450 50  0001 C CNN
+	1    8250 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3450 8250 3600
+Text Label 3500 3700 0    50   ~ 0
+GP_TIMER
+Text Label 7400 2600 2    50   ~ 0
+GP_TIMER
+Wire Wire Line
+	8250 2450 8600 2450
+Text GLabel 9000 2750 2    50   Input ~ 0
+GBAT
+Wire Wire Line
+	8800 2550 8800 2750
+Wire Wire Line
+	8800 2750 9000 2750
+$Comp
+L power:GND #PWR0104
+U 1 1 5CB519C6
+P 9250 2100
+F 0 "#PWR0104" H 9250 1850 50  0001 C CNN
+F 1 "GND" H 9255 1927 50  0000 C CNN
+F 2 "" H 9250 2100 50  0001 C CNN
+F 3 "" H 9250 2100 50  0001 C CNN
+	1    9250 2100
+	-1   0    0    1   
+$EndComp
+NoConn ~ 3500 3500
+NoConn ~ 3500 3600
+Wire Wire Line
+	9250 2150 9250 2100
+Wire Wire Line
+	8800 2150 8950 2150
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5CB5C7AE
+P 8950 2150
+F 0 "#FLG0101" H 8950 2225 50  0001 C CNN
+F 1 "PWR_FLAG" H 8950 2324 50  0000 C CNN
+F 2 "" H 8950 2150 50  0001 C CNN
+F 3 "~" H 8950 2150 50  0001 C CNN
+	1    8950 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 8950 2150
+Wire Wire Line
+	8950 2150 9250 2150
+Wire Wire Line
+	8250 3600 8400 3600
+Text Notes 8250 3150 0    50   ~ 0
+Magnetic switch
+Text Label 9100 3600 0    50   ~ 0
+MSW
+Text Label 7400 2450 2    50   ~ 0
+MSW
+$Comp
+L Device:R R107
+U 1 1 5CB65E27
+P 6200 4150
+F 0 "R107" V 5993 4150 50  0000 C CNN
+F 1 "10K" V 6084 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6130 4150 50  0001 C CNN
+F 3 "~" H 6200 4150 50  0001 C CNN
+	1    6200 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 4150 6350 4150
+Wire Wire Line
+	6050 4150 5900 4150
+Wire Wire Line
+	6550 3850 6550 4150
+Text Label 3500 3800 0    50   ~ 0
+MSW
+Text Label 5900 4150 2    50   ~ 0
+MSW
+Wire Wire Line
+	8800 3600 9100 3600
+$Comp
+L custom:NDS355AN Q101
+U 1 1 5CB6C859
+P 8800 2350
+F 0 "Q101" H 8897 2396 50  0000 L CNN
+F 1 "NDS355AN" H 8897 2305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8950 2100 50  0001 L BNN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS355AN-D.PDF" H 8950 2000 50  0001 L BNN
+	1    8800 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R108
+U 1 1 5CB3BF5A
+P 6200 4450
+F 0 "R108" V 5993 4450 50  0000 C CNN
+F 1 "10K" V 6084 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6130 4450 50  0001 C CNN
+F 3 "~" H 6200 4450 50  0001 C CNN
+	1    6200 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 4450 6350 4450
+Wire Wire Line
+	6050 4450 5900 4450
+Wire Wire Line
+	6550 4150 6550 4450
+Text Label 5900 4450 2    50   ~ 0
+GP_TIMER
+Connection ~ 6550 3850
+Connection ~ 6550 4150
+$EndSCHEMATC
