@@ -1,32 +1,19 @@
 EESchema Schematic File Version 4
 LIBS:Door-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
-Date ""
-Rev ""
+Title "TPL5110 low power timer"
+Date "2019-04-27"
+Rev "1.2"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L custom:TPL5111 U?
-U 1 1 5CB4238D
-P 5400 2250
-AR Path="/5CB4238D" Ref="U?"  Part="1" 
-AR Path="/5CB41891/5CB4238D" Ref="U301"  Part="1" 
-F 0 "U301" H 5400 2565 50  0000 C CNN
-F 1 "TPL5111" H 5400 2474 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 5350 1800 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/tpl5110.pdf" H 5400 1700 50  0001 C CNN
-	1    5400 2250
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3V3 #PWR0301
 U 1 1 5CB42607
@@ -39,7 +26,7 @@ F 3 "" H 4200 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 2300 6000 2300
+	6150 2300 6000 2300
 Wire Wire Line
 	4800 2500 4650 2500
 Wire Wire Line
@@ -57,8 +44,6 @@ F 3 "~" H 4650 3050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4650 3200 4650 3350
-Text HLabel 6000 2400 2    50   Input ~ 0
-DRV_OUT
 Text HLabel 6000 2500 2    50   Input ~ 0
 DONE
 Text HLabel 4400 2750 0    50   Input ~ 0
@@ -68,12 +53,6 @@ Wire Wire Line
 Connection ~ 4650 2750
 Wire Wire Line
 	4650 2750 4650 2900
-Text GLabel 6250 2300 2    50   Input ~ 0
-GBAT
-Text GLabel 4250 2400 0    50   Input ~ 0
-GBAT
-Text GLabel 4650 3350 3    50   Input ~ 0
-GBAT
 $Comp
 L Device:C C301
 U 1 1 5CB3F474
@@ -90,7 +69,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 2000 4450 2000
 Wire Wire Line
-	4250 2400 4450 2400
+	4150 2400 4450 2400
 Wire Wire Line
 	4450 2050 4450 2000
 Connection ~ 4450 2000
@@ -101,4 +80,117 @@ Wire Wire Line
 Connection ~ 4450 2400
 Wire Wire Line
 	4450 2400 4800 2400
+$Comp
+L power:GND #PWR0304
+U 1 1 5CC54827
+P 6150 2300
+F 0 "#PWR0304" H 6150 2050 50  0001 C CNN
+F 1 "GND" H 6155 2127 50  0000 C CNN
+F 2 "" H 6150 2300 50  0001 C CNN
+F 3 "" H 6150 2300 50  0001 C CNN
+	1    6150 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0302
+U 1 1 5CC5493B
+P 4150 2400
+F 0 "#PWR0302" H 4150 2150 50  0001 C CNN
+F 1 "GND" H 4155 2227 50  0000 C CNN
+F 2 "" H 4150 2400 50  0001 C CNN
+F 3 "" H 4150 2400 50  0001 C CNN
+	1    4150 2400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0303
+U 1 1 5CC54AB5
+P 4650 3350
+F 0 "#PWR0303" H 4650 3100 50  0001 C CNN
+F 1 "GND" H 4655 3177 50  0000 C CNN
+F 2 "" H 4650 3350 50  0001 C CNN
+F 3 "" H 4650 3350 50  0001 C CNN
+	1    4650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:TPL5110 U301
+U 1 1 5CC54E39
+P 5400 2250
+F 0 "U301" H 5400 2565 50  0000 C CNN
+F 1 "TPL5110" H 5400 2474 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 5350 1800 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tpl5110.pdf" H 5400 1700 50  0001 C CNN
+	1    5400 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2400 6250 2400
+$Comp
+L Transistor_FET:IRLML6402 Q?
+U 1 1 5CC8AFB7
+P 6900 2400
+AR Path="/5CC8AFB7" Ref="Q?"  Part="1" 
+AR Path="/5CB41891/5CC8AFB7" Ref="Q301"  Part="1" 
+F 0 "Q301" H 7105 2446 50  0000 L CNN
+F 1 "IRLML6402" H 7105 2355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7100 2325 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 6900 2400 50  0001 L CNN
+	1    6900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2050 7300 2050
+Wire Wire Line
+	7000 2200 7000 2050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5CC8AFC0
+P 7650 2800
+AR Path="/5CC8AFC0" Ref="#PWR?"  Part="1" 
+AR Path="/5CB41891/5CC8AFC0" Ref="#PWR0305"  Part="1" 
+F 0 "#PWR0305" H 7650 2650 50  0001 C CNN
+F 1 "+3V3" H 7665 2973 50  0000 C CNN
+F 2 "" H 7650 2800 50  0001 C CNN
+F 3 "" H 7650 2800 50  0001 C CNN
+	1    7650 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC8AFC6
+P 7300 2050
+AR Path="/5CC8AFC6" Ref="#FLG?"  Part="1" 
+AR Path="/5CB41891/5CC8AFC6" Ref="#FLG0301"  Part="1" 
+F 0 "#FLG0301" H 7300 2125 50  0001 C CNN
+F 1 "PWR_FLAG" H 7300 2223 50  0000 C CNN
+F 2 "" H 7300 2050 50  0001 C CNN
+F 3 "~" H 7300 2050 50  0001 C CNN
+	1    7300 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 7300 2050
+Wire Wire Line
+	7300 2050 7650 2050
+Wire Wire Line
+	7000 2600 7000 2800
+Wire Wire Line
+	7000 2800 7650 2800
+$Comp
+L Device:R R?
+U 1 1 5CC8AFD0
+P 6400 2400
+AR Path="/5CC8AFD0" Ref="R?"  Part="1" 
+AR Path="/5CB41891/5CC8AFD0" Ref="R302"  Part="1" 
+F 0 "R302" V 6193 2400 50  0000 C CNN
+F 1 "10K" V 6284 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6330 2400 50  0001 C CNN
+F 3 "~" H 6400 2400 50  0001 C CNN
+	1    6400 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 2400 6700 2400
+Text HLabel 7650 2050 2    50   Input ~ 0
+LOAD
 $EndSCHEMATC

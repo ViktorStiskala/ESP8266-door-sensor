@@ -2,3 +2,4 @@
 *.kicad_pcb-bak
 gerber/
 gerber.zip
+fp-info-cache

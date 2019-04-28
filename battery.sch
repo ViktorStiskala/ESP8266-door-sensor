@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
 LIBS:Door-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
-Title "Vermicompost board"
-Date "2019-02-02"
-Rev ""
+Title "Battery status monitor"
+Date "2019-04-27"
+Rev "1.2"
 Comp "Viktor Stískala"
 Comment1 ""
 Comment2 ""
@@ -131,6 +131,15 @@ F 3 "" H 6700 2900 50  0001 C CNN
 	1    6700 2900
 	1    0    0    -1  
 $EndComp
-Text GLabel 6650 4550 2    50   Input ~ 0
-GBAT
+$Comp
+L power:GND #PWR0202
+U 1 1 5CC5A0B2
+P 6650 4550
+F 0 "#PWR0202" H 6650 4300 50  0001 C CNN
+F 1 "GND" H 6655 4377 50  0000 C CNN
+F 2 "" H 6650 4550 50  0001 C CNN
+F 3 "" H 6650 4550 50  0001 C CNN
+	1    6650 4550
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/Users/viktorstiskala/Dropbox/HW Projects/Door sensor/Door/Door.sch</source>
+    <date>2019 April 27, Saturday 21:20:24</date>
+    <tool>Eeschema (5.1.2-1)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Door sensor</title>
+        <company/>
+        <rev>1.1</rev>
+        <date>2019-04-27</date>
+        <source>Door.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/battery/" tstamps="/5CB299D3/">
+      <title_block>
+        <title>Vermicompost board</title>
+        <company>Viktor Stískala</company>
+        <rev>1.1</rev>
+        <date>2019-04-27</date>
+        <source>battery.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/timer/" tstamps="/5CB41891/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev>1.1</rev>
+        <date>2019-04-27</date>
+        <source>timer.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U101">
+      <value>ESP-12F</value>
+      <footprint>RF_Module:ESP-12E</footprint>
+      <datasheet>http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf</datasheet>
+      <libsource lib="RF_Module" part="ESP-12F" description="802.11 b/g/n Wi-Fi Module"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4F6225</tstamp>
+    </comp>
+    <comp ref="J101">
+      <value>Programming</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4FA37C</tstamp>
+    </comp>
+    <comp ref="R101">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4F67DE</tstamp>
+    </comp>
+    <comp ref="R102">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4F6AB4</tstamp>
+    </comp>
+    <comp ref="SW101">
+      <value>FLASH</value>
+      <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4F6E1D</tstamp>
+    </comp>
+    <comp ref="R105">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4F8396</tstamp>
+    </comp>
+    <comp ref="J102">
+      <value>Battery input</value>
+      <footprint>ViktorStiskala:PH_MPT_0,5_2-2,54</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4FAA17</tstamp>
+    </comp>
+    <comp ref="SW102">
+      <value>RESET</value>
+      <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C50196A</tstamp>
+    </comp>
+    <comp ref="R106">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5040A5</tstamp>
+    </comp>
+    <comp ref="R103">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C50C0AD</tstamp>
+    </comp>
+    <comp ref="C101">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5020FB</tstamp>
+    </comp>
+    <comp ref="R104">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C54F173</tstamp>
+    </comp>
+    <comp ref="SW103">
+      <value>SW_Reed</value>
+      <footprint>ViktorStiskala:PH_MPT_0,5_2-2,54</footprint>
+      <libsource lib="Switch" part="SW_Reed" description="reed switch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB49925</tstamp>
+    </comp>
+    <comp ref="R107">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB65E27</tstamp>
+    </comp>
+    <comp ref="R108">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CB3BF5A</tstamp>
+    </comp>
+    <comp ref="Q101">
+      <value>IRLML6402</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c</datasheet>
+      <libsource lib="Transistor_FET" part="IRLML6402" description="-3.7A Id, -20V Vds, P-Channel MOSFET, 65mOhm Rds, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CC4AB11</tstamp>
+    </comp>
+    <comp ref="Q202">
+      <value>BC817</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BC/BC817.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BC817" description="0.8A Ic, 45V Vce, NPN Transistor, SOT-23"/>
+      <sheetpath names="/battery/" tstamps="/5CB299D3/"/>
+      <tstamp>5CB2A271</tstamp>
+    </comp>
+    <comp ref="Q201">
+      <value>BSS83P</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.farnell.com/datasheets/1835997.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BSS83P" description="-0.33A Id, -60V Vds, P-Channel MOSFET, SOT-23"/>
+      <sheetpath names="/battery/" tstamps="/5CB299D3/"/>
+      <tstamp>5CB2A272</tstamp>
+    </comp>
+    <comp ref="R201">
+      <value>15K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/battery/" tstamps="/5CB299D3/"/>
+      <tstamp>5C5485D2</tstamp>
+    </comp>
+    <comp ref="R202">
+      <value>4.3K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/battery/" tstamps="/5CB299D3/"/>
+      <tstamp>5C548720</tstamp>
+    </comp>
+    <comp ref="R203">
+      <value>2.2K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/battery/" tstamps="/5CB299D3/"/>
+      <tstamp>5C54973B</tstamp>
+    </comp>
+    <comp ref="R204">
+      <value>22K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/battery/" tstamps="/5CB299D3/"/>
+      <tstamp>5C549E79</tstamp>
+    </comp>
+    <comp ref="R301">
+      <value>12K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/timer/" tstamps="/5CB41891/"/>
+      <tstamp>5CB42D38</tstamp>
+    </comp>
+    <comp ref="C301">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/timer/" tstamps="/5CB41891/"/>
+      <tstamp>5CB3F474</tstamp>
+    </comp>
+    <comp ref="U301">
+      <value>TPL5110</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tpl5110.pdf</datasheet>
+      <libsource lib="custom" part="TPL5110" description=""/>
+      <sheetpath names="/timer/" tstamps="/5CB41891/"/>
+      <tstamp>5CC54E39</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RF_Module" part="ESP-12E">
+      <aliases>
+        <alias>ESP-12F</alias>
+      </aliases>
+      <description>802.11 b/g/n Wi-Fi Module</description>
+      <docs>http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf</docs>
+      <footprints>
+        <fp>ESP?12*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP-12E</field>
+        <field name="Footprint">RF_Module:ESP-12E</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~RST" type="input"/>
+        <pin num="2" name="ADC" type="input"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="GPIO16" type="BiDi"/>
+        <pin num="5" name="GPIO14" type="BiDi"/>
+        <pin num="6" name="GPIO12" type="BiDi"/>
+        <pin num="7" name="GPIO13" type="BiDi"/>
+        <pin num="8" name="VCC" type="power_in"/>
+        <pin num="9" name="CS0" type="input"/>
+        <pin num="10" name="MISO" type="BiDi"/>
+        <pin num="11" name="GPIO9" type="BiDi"/>
+        <pin num="12" name="GPIO10" type="BiDi"/>
+        <pin num="13" name="MOSI" type="BiDi"/>
+        <pin num="14" name="SCLK" type="BiDi"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="GPIO15" type="BiDi"/>
+        <pin num="17" name="GPIO2" type="BiDi"/>
+        <pin num="18" name="GPIO0" type="BiDi"/>
+        <pin num="19" name="GPIO4" type="BiDi"/>
+        <pin num="20" name="GPIO5" type="BiDi"/>
+        <pin num="21" name="GPIO3/RXD" type="BiDi"/>
+        <pin num="22" name="GPIO1/TXD" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Reed">
+      <description>reed switch</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Reed</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BC817">
+      <aliases>
+        <alias>BC818</alias>
+        <alias>BC847</alias>
+        <alias>BC848</alias>
+        <alias>BC849</alias>
+        <alias>BC850</alias>
+        <alias>MMBT3904</alias>
+        <alias>MMBT5550L</alias>
+        <alias>MMBT5551L</alias>
+      </aliases>
+      <description>0.8A Ic, 45V Vce, NPN Transistor, SOT-23</description>
+      <docs>http://www.fairchildsemi.com/ds/BC/BC817.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC817</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="TP0610T">
+      <aliases>
+        <alias>VP0610T</alias>
+        <alias>BSS84</alias>
+        <alias>NTR2101P</alias>
+        <alias>BSS83P</alias>
+        <alias>Si2319CDS</alias>
+        <alias>IRLML6402</alias>
+        <alias>DMG2301L</alias>
+      </aliases>
+      <description>-0.18A Id, -60V Vds, P-Channel MOSFET, SOT-23</description>
+      <docs>http://www.vishay.com/docs/70209/70209.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">TP0610T</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="custom" part="TPL5110">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPL5110</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tpl5110.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="DELAY/M_DRV" type="input"/>
+        <pin num="4" name="DONE" type="input"/>
+        <pin num="5" name="DRVn" type="output"/>
+        <pin num="6" name="EN/ONE_SHOT" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/Library/Application Support/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Library/Application Support/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="RF_Module">
+      <uri>/Library/Application Support/kicad/library/RF_Module.lib</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/Library/Application Support/kicad/library/Switch.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/Library/Application Support/kicad/library/Transistor_BJT.lib</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>/Library/Application Support/kicad/library/Transistor_FET.lib</uri>
+    </library>
+    <library logical="custom">
+      <uri>/Users/viktorstiskala/Dropbox/HW Projects/components/custom.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/RST">
+      <node ref="U101" pin="1"/>
+      <node ref="R103" pin="2"/>
+      <node ref="SW102" pin="2"/>
+      <node ref="U101" pin="4"/>
+    </net>
+    <net code="2" name="Net-(U101-Pad10)">
+      <node ref="U101" pin="10"/>
+    </net>
+    <net code="3" name="Net-(U101-Pad11)">
+      <node ref="U101" pin="11"/>
+    </net>
+    <net code="4" name="Net-(U101-Pad12)">
+      <node ref="U101" pin="12"/>
+    </net>
+    <net code="5" name="Net-(U101-Pad13)">
+      <node ref="U101" pin="13"/>
+    </net>
+    <net code="6" name="Net-(U101-Pad14)">
+      <node ref="U101" pin="14"/>
+    </net>
+    <net code="7" name="GND">
+      <node ref="J101" pin="1"/>
+      <node ref="C301" pin="2"/>
+      <node ref="R301" pin="2"/>
+      <node ref="U301" pin="6"/>
+      <node ref="U101" pin="15"/>
+      <node ref="SW101" pin="1"/>
+      <node ref="R107" pin="1"/>
+      <node ref="R105" pin="1"/>
+      <node ref="R202" pin="2"/>
+      <node ref="Q202" pin="2"/>
+      <node ref="J102" pin="1"/>
+      <node ref="SW102" pin="1"/>
+      <node ref="R106" pin="1"/>
+      <node ref="U301" pin="2"/>
+      <node ref="C101" pin="2"/>
+      <node ref="R108" pin="1"/>
+    </net>
+    <net code="8" name="/GP15">
+      <node ref="R106" pin="2"/>
+      <node ref="U101" pin="16"/>
+    </net>
+    <net code="9" name="/GP2">
+      <node ref="U101" pin="17"/>
+      <node ref="R102" pin="2"/>
+    </net>
+    <net code="10" name="/GP0">
+      <node ref="U101" pin="18"/>
+      <node ref="SW101" pin="2"/>
+      <node ref="R101" pin="2"/>
+    </net>
+    <net code="11" name="/GP_TIMER">
+      <node ref="R108" pin="2"/>
+      <node ref="U101" pin="19"/>
+      <node ref="U301" pin="4"/>
+    </net>
+    <net code="12" name="/ADC">
+      <node ref="R201" pin="2"/>
+      <node ref="U101" pin="2"/>
+      <node ref="R202" pin="1"/>
+    </net>
+    <net code="13" name="/RX">
+      <node ref="U101" pin="21"/>
+      <node ref="J101" pin="3"/>
+    </net>
+    <net code="14" name="/TX">
+      <node ref="U101" pin="22"/>
+      <node ref="J101" pin="2"/>
+    </net>
+    <net code="15" name="/EN">
+      <node ref="U101" pin="3"/>
+      <node ref="R104" pin="2"/>
+    </net>
+    <net code="16" name="Net-(U101-Pad5)">
+      <node ref="U101" pin="5"/>
+    </net>
+    <net code="17" name="Net-(U101-Pad6)">
+      <node ref="U101" pin="6"/>
+    </net>
+    <net code="18" name="VLOAD">
+      <node ref="R104" pin="1"/>
+      <node ref="R101" pin="1"/>
+      <node ref="U101" pin="8"/>
+      <node ref="C101" pin="1"/>
+      <node ref="R103" pin="1"/>
+      <node ref="Q101" pin="2"/>
+      <node ref="R102" pin="1"/>
+    </net>
+    <net code="19" name="Net-(U101-Pad9)">
+      <node ref="U101" pin="9"/>
+    </net>
+    <net code="20" name="/EN_BAT">
+      <node ref="R105" pin="2"/>
+      <node ref="U101" pin="20"/>
+      <node ref="R203" pin="1"/>
+    </net>
+    <net code="21" name="+3V3">
+      <node ref="Q201" pin="2"/>
+      <node ref="U301" pin="1"/>
+      <node ref="J102" pin="2"/>
+      <node ref="C301" pin="1"/>
+      <node ref="SW103" pin="2"/>
+      <node ref="R204" pin="1"/>
+      <node ref="Q101" pin="3"/>
+    </net>
+    <net code="22" name="/timer/DRV_OUT">
+      <node ref="Q101" pin="1"/>
+      <node ref="U301" pin="5"/>
+    </net>
+    <net code="23" name="/MSW">
+      <node ref="R301" pin="1"/>
+      <node ref="R107" pin="2"/>
+      <node ref="U101" pin="7"/>
+      <node ref="SW103" pin="1"/>
+      <node ref="U301" pin="3"/>
+    </net>
+    <net code="24" name="Net-(Q201-Pad3)">
+      <node ref="R201" pin="1"/>
+      <node ref="Q201" pin="3"/>
+    </net>
+    <net code="25" name="Net-(Q202-Pad1)">
+      <node ref="R203" pin="2"/>
+      <node ref="Q202" pin="1"/>
+    </net>
+    <net code="26" name="Net-(Q201-Pad1)">
+      <node ref="R204" pin="2"/>
+      <node ref="Q202" pin="3"/>
+      <node ref="Q201" pin="1"/>
+    </net>
+  </nets>
+</export>
