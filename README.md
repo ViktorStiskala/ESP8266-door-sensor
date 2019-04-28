@@ -5,7 +5,7 @@ This design represents a small sensor intended to be triggered by a magnetic ree
 ## PCB design
 
 - [Schematic design](pcb/schematic/Door.pdf)
-- [Gerblook](http://gerblook.org/pcb/ystvpxL37dVEFK4SQLsg35)
+- [Gerblook](http://gerblook.org/pcb/wmdqLb5envAoFVmN6yVcNm)
 
 [![PCB](pcb.png)](pcb.png)
 
