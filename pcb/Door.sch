@@ -1,0 +1,551 @@
+EESchema Schematic File Version 4
+LIBS:Door-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "Door sensor"
+Date "2019-04-28"
+Rev "1.2"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 9250 3000 700  450 
+U 5CB299D3
+F0 "battery" 50
+F1 "battery.sch" 50
+F2 "ADC_OUT" O L 9250 3300 50 
+F3 "EN" I L 9250 3150 50 
+$EndSheet
+$Comp
+L RF_Module:ESP-12F U101
+U 1 1 5C4F6225
+P 2500 3600
+F 0 "U101" H 2500 4600 50  0000 C CNN
+F 1 "ESP-12F" H 2500 4500 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 2500 3600 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 2150 3700 50  0001 C CNN
+	1    2500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J101
+U 1 1 5C4FA37C
+P 5100 3800
+F 0 "J101" H 5180 3842 50  0000 L CNN
+F 1 "Programming" H 5180 3751 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5100 3800 50  0001 C CNN
+F 3 "~" H 5100 3800 50  0001 C CNN
+	1    5100 3800
+	1    0    0    -1  
+$EndComp
+Text Label 3100 3100 0    50   ~ 0
+TX
+Text Label 3100 3300 0    50   ~ 0
+RX
+Text Label 4900 3800 2    50   ~ 0
+TX
+Text Label 3100 3000 0    50   ~ 0
+GP0
+Text Label 3100 3200 0    50   ~ 0
+GP2
+Wire Wire Line
+	2500 2800 2850 2800
+$Comp
+L power:GND #PWR0102
+U 1 1 5C4FACCF
+P 2850 4400
+F 0 "#PWR0102" H 2850 4150 50  0001 C CNN
+F 1 "GND" H 2855 4227 50  0000 C CNN
+F 2 "" H 2850 4400 50  0001 C CNN
+F 3 "" H 2850 4400 50  0001 C CNN
+	1    2850 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4300 2850 4300
+$Comp
+L Device:R R101
+U 1 1 5C4F67DE
+P 6700 4400
+F 0 "R101" V 6493 4400 50  0000 C CNN
+F 1 "10K" V 6584 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6630 4400 50  0001 C CNN
+F 3 "~" H 6700 4400 50  0001 C CNN
+	1    6700 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4400 7050 4400
+Wire Wire Line
+	7050 4400 7050 4250
+Wire Wire Line
+	6550 4400 6400 4400
+Text Label 6400 4400 2    50   ~ 0
+GP0
+$Comp
+L Device:R R102
+U 1 1 5C4F6AB4
+P 6700 4700
+F 0 "R102" V 6493 4700 50  0000 C CNN
+F 1 "10K" V 6584 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6630 4700 50  0001 C CNN
+F 3 "~" H 6700 4700 50  0001 C CNN
+	1    6700 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4700 7050 4700
+Wire Wire Line
+	7050 4700 7050 4400
+Connection ~ 7050 4400
+Wire Wire Line
+	6550 4700 6400 4700
+Text Label 6400 4700 2    50   ~ 0
+GP2
+$Comp
+L Device:R R105
+U 1 1 5C4F8396
+P 9100 2850
+F 0 "R105" V 8893 2850 50  0000 C CNN
+F 1 "10K" V 8984 2850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9030 2850 50  0001 C CNN
+F 3 "~" H 9100 2850 50  0001 C CNN
+	1    9100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J102
+U 1 1 5C4FAA17
+P 5300 2650
+F 0 "J102" H 5380 2642 50  0000 L CNN
+F 1 "Battery input" H 5380 2551 50  0000 L CNN
+F 2 "ViktorStiskala:PH_MPT_0,5_2-2,54" H 5300 2650 50  0001 C CNN
+F 3 "~" H 5300 2650 50  0001 C CNN
+	1    5300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5C4FC24E
+P 5000 2650
+F 0 "#FLG0102" H 5000 2725 50  0001 C CNN
+F 1 "PWR_FLAG" H 5000 2824 50  0000 C CNN
+F 2 "" H 5000 2650 50  0001 C CNN
+F 3 "~" H 5000 2650 50  0001 C CNN
+	1    5000 2650
+	1    0    0    -1  
+$EndComp
+Text Label 1900 3000 2    50   ~ 0
+RST
+Connection ~ 7050 4700
+Text Label 6400 5000 2    50   ~ 0
+RST
+Text Notes 6200 3900 0    50   ~ 0
+Pull ups
+Text Notes 4450 2300 0    50   ~ 0
+Battery input
+$Comp
+L Device:R R106
+U 1 1 5C5040A5
+P 3400 4100
+F 0 "R106" V 3193 4100 50  0000 C CNN
+F 1 "10K" V 3284 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3330 4100 50  0001 C CNN
+F 3 "~" H 3400 4100 50  0001 C CNN
+	1    3400 4100
+	-1   0    0    1   
+$EndComp
+Text Notes 4450 3300 0    50   ~ 0
+Programming input
+$Comp
+L Device:R R103
+U 1 1 5C50C0AD
+P 6700 5000
+F 0 "R103" V 6493 5000 50  0000 C CNN
+F 1 "10K" V 6584 5000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6630 5000 50  0001 C CNN
+F 3 "~" H 6700 5000 50  0001 C CNN
+	1    6700 5000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5000 7050 5000
+Wire Wire Line
+	6550 5000 6400 5000
+Text Label 3100 4000 0    50   ~ 0
+RST
+Wire Wire Line
+	2850 2800 3700 2800
+Wire Wire Line
+	3700 2800 3700 3450
+Connection ~ 2850 2800
+Wire Wire Line
+	2850 2800 2850 2700
+$Comp
+L Device:C C101
+U 1 1 5C5020FB
+P 3700 3600
+F 0 "C101" H 3815 3646 50  0000 L CNN
+F 1 "100nF" H 3815 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3738 3450 50  0001 C CNN
+F 3 "~" H 3700 3600 50  0001 C CNN
+	1    3700 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4300 3400 4300
+Wire Wire Line
+	3700 4300 3700 3750
+Connection ~ 2850 4300
+Wire Wire Line
+	2850 4300 2850 4400
+Text Label 1900 3400 2    50   ~ 0
+ADC
+Text Label 1900 3200 2    50   ~ 0
+EN
+Text Label 6400 5300 2    50   ~ 0
+EN
+$Comp
+L Device:R R104
+U 1 1 5C54F173
+P 6700 5300
+F 0 "R104" V 6493 5300 50  0000 C CNN
+F 1 "10K" V 6584 5300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6630 5300 50  0001 C CNN
+F 3 "~" H 6700 5300 50  0001 C CNN
+	1    6700 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5300 7050 5300
+Wire Wire Line
+	6550 5300 6400 5300
+NoConn ~ 1900 3600
+NoConn ~ 1900 3700
+NoConn ~ 1900 4000
+NoConn ~ 1900 4100
+Text Label 3100 3500 0    50   ~ 0
+EN_BAT
+Wire Wire Line
+	4600 2750 5000 2750
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5C59FB2E
+P 5000 2750
+F 0 "#FLG0103" H 5000 2825 50  0001 C CNN
+F 1 "PWR_FLAG" H 5000 2924 50  0000 C CNN
+F 2 "" H 5000 2750 50  0001 C CNN
+F 3 "~" H 5000 2750 50  0001 C CNN
+	1    5000 2750
+	-1   0    0    1   
+$EndComp
+Connection ~ 5000 2750
+Wire Wire Line
+	5000 2750 5100 2750
+Text Label 4900 3900 2    50   ~ 0
+RX
+Wire Wire Line
+	4900 3700 4600 3700
+Wire Wire Line
+	4600 3700 4600 3650
+Connection ~ 5000 2650
+Wire Wire Line
+	5000 2650 4600 2650
+Wire Wire Line
+	5100 2650 5000 2650
+$Comp
+L power:GND #PWR0103
+U 1 1 5C5D1800
+P 4600 3650
+F 0 "#PWR0103" H 4600 3400 50  0001 C CNN
+F 1 "GND" H 4605 3477 50  0000 C CNN
+F 2 "" H 4600 3650 50  0001 C CNN
+F 3 "" H 4600 3650 50  0001 C CNN
+	1    4600 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 5CB326A2
+P 4600 2750
+F 0 "#PWR0106" H 4600 2600 50  0001 C CNN
+F 1 "+3V3" H 4615 2923 50  0000 C CNN
+F 2 "" H 4600 2750 50  0001 C CNN
+F 3 "" H 4600 2750 50  0001 C CNN
+	1    4600 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 4700 7050 5000
+Text Label 8900 3150 2    50   ~ 0
+EN_BAT
+NoConn ~ 1900 3800
+NoConn ~ 1900 3900
+Connection ~ 7050 5000
+Wire Wire Line
+	7050 5000 7050 5300
+Text Label 9250 3300 2    50   ~ 0
+ADC
+$Sheet
+S 6900 2500 850  450 
+U 5CB41891
+F0 "timer" 50
+F1 "timer.sch" 50
+F2 "DONE" I L 6900 2800 50 
+F3 "ENABLE" I L 6900 2650 50 
+F4 "LOAD" I R 7750 2650 50 
+$EndSheet
+Text Label 3100 3400 0    50   ~ 0
+GP_TIMER
+Text Label 6600 2800 2    50   ~ 0
+GP_TIMER
+Text Label 6900 2650 2    50   ~ 0
+MSW
+Text Label 3100 3700 0    50   ~ 0
+MSW
+$Comp
+L power:GND #PWR0101
+U 1 1 5CC4D0DD
+P 4600 2650
+F 0 "#PWR0101" H 4600 2400 50  0001 C CNN
+F 1 "GND" H 4605 2477 50  0000 C CNN
+F 2 "" H 4600 2650 50  0001 C CNN
+F 3 "" H 4600 2650 50  0001 C CNN
+	1    4600 2650
+	-1   0    0    1   
+$EndComp
+Text GLabel 2850 2700 1    50   Input ~ 0
+VLOAD
+Text GLabel 7050 4250 1    50   Input ~ 0
+VLOAD
+NoConn ~ 3100 3600
+NoConn ~ 3100 3800
+Text GLabel 8000 2650 2    50   Input ~ 0
+VLOAD
+Wire Wire Line
+	7750 2650 8000 2650
+Wire Wire Line
+	3400 4250 3400 4300
+Connection ~ 3400 4300
+Wire Wire Line
+	3400 4300 3700 4300
+Wire Wire Line
+	3400 3950 3400 3900
+Wire Wire Line
+	3400 3900 3100 3900
+$Comp
+L Device:R R108
+U 1 1 5CB3BF5A
+P 6750 3050
+F 0 "R108" V 6543 3050 50  0000 C CNN
+F 1 "10K" V 6634 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 3050 50  0001 C CNN
+F 3 "~" H 6750 3050 50  0001 C CNN
+	1    6750 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 2800 6750 2900
+Wire Wire Line
+	6750 2800 6900 2800
+Wire Wire Line
+	6600 2800 6750 2800
+Connection ~ 6750 2800
+Wire Wire Line
+	6750 3200 6750 3300
+$Comp
+L power:GND #PWR0104
+U 1 1 5CCA6C6C
+P 6750 3300
+F 0 "#PWR0104" H 6750 3050 50  0001 C CNN
+F 1 "GND" H 6755 3127 50  0000 C CNN
+F 2 "" H 6750 3300 50  0001 C CNN
+F 3 "" H 6750 3300 50  0001 C CNN
+	1    6750 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 3150 9100 3150
+Wire Wire Line
+	9100 3150 9100 3000
+Wire Wire Line
+	9100 3150 8900 3150
+Connection ~ 9100 3150
+$Comp
+L power:GND #PWR0105
+U 1 1 5CCB227F
+P 9100 2600
+F 0 "#PWR0105" H 9100 2350 50  0001 C CNN
+F 1 "GND" H 9105 2427 50  0000 C CNN
+F 2 "" H 9100 2600 50  0001 C CNN
+F 3 "" H 9100 2600 50  0001 C CNN
+	1    9100 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9100 2600 9100 2700
+Wire Notes Line
+	6200 3950 6200 5400
+Wire Notes Line
+	6200 5400 7200 5400
+Wire Notes Line
+	7200 5400 7200 3950
+Wire Notes Line
+	7200 3950 6200 3950
+Wire Notes Line
+	8600 2350 10050 2350
+Wire Notes Line
+	10050 2350 10050 3600
+Wire Notes Line
+	10050 3600 8600 3600
+Wire Notes Line
+	8600 3600 8600 2350
+Text Notes 8600 2300 0    50   ~ 0
+Battery status monitor
+Wire Notes Line
+	6200 2350 8350 2350
+Wire Notes Line
+	8350 2350 8350 3600
+Wire Notes Line
+	8350 3600 6200 3600
+Wire Notes Line
+	6200 3600 6200 2350
+Text Notes 6200 2300 0    50   ~ 0
+Wake up timer
+Wire Notes Line
+	5750 3350 5750 4050
+Wire Notes Line
+	5750 4050 4450 4050
+Wire Notes Line
+	4450 4050 4450 3350
+Wire Notes Line
+	4450 3350 5750 3350
+Wire Notes Line
+	4450 2350 5950 2350
+Wire Notes Line
+	5950 2350 5950 3050
+Wire Notes Line
+	5950 3050 4450 3050
+Wire Notes Line
+	4450 3050 4450 2350
+Wire Notes Line
+	1700 2350 4100 2350
+Wire Notes Line
+	4100 2350 4100 4700
+Wire Notes Line
+	4100 4700 1700 4700
+Wire Notes Line
+	1700 2350 1700 4700
+Text Notes 1700 2300 0    50   ~ 0
+ESP8266
+$Comp
+L Switch:SW_Push SW101
+U 1 1 5C4F6E1D
+P 7850 4250
+F 0 "SW101" H 7850 4065 50  0000 C CNN
+F 1 "FLASH" H 7850 4156 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7850 4450 50  0001 C CNN
+F 3 "" H 7850 4450 50  0001 C CNN
+	1    7850 4250
+	-1   0    0    1   
+$EndComp
+Text Label 7650 4250 2    50   ~ 0
+GP0
+$Comp
+L power:GND #PWR0108
+U 1 1 5C4F76F7
+P 8200 4250
+F 0 "#PWR0108" H 8200 4000 50  0001 C CNN
+F 1 "GND" H 8205 4077 50  0000 C CNN
+F 2 "" H 8200 4250 50  0001 C CNN
+F 3 "" H 8200 4250 50  0001 C CNN
+	1    8200 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4250 8200 4250
+$Comp
+L power:GND #PWR0109
+U 1 1 5C501C9F
+P 8200 4800
+F 0 "#PWR0109" H 8200 4550 50  0001 C CNN
+F 1 "GND" H 8205 4627 50  0000 C CNN
+F 2 "" H 8200 4800 50  0001 C CNN
+F 3 "" H 8200 4800 50  0001 C CNN
+	1    8200 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4800 8200 4800
+Text Notes 7450 3900 0    50   ~ 0
+Programming buttons
+$Comp
+L Switch:SW_Reed SW103
+U 1 1 5CB49925
+P 9050 4400
+AR Path="/5CB49925" Ref="SW103"  Part="1" 
+AR Path="/5CB41891/5CB49925" Ref="SW?"  Part="1" 
+F 0 "SW103" H 9050 4178 50  0000 C CNN
+F 1 "SW_Reed" H 9050 4269 50  0000 C CNN
+F 2 "ViktorStiskala:PH_MPT_0,5_2-2,54" H 9050 4400 50  0001 C CNN
+F 3 "" H 9050 4400 50  0001 C CNN
+	1    9050 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 5CB4D981
+P 8700 4250
+F 0 "#PWR0110" H 8700 4100 50  0001 C CNN
+F 1 "+3V3" H 8715 4423 50  0000 C CNN
+F 2 "" H 8700 4250 50  0001 C CNN
+F 3 "" H 8700 4250 50  0001 C CNN
+	1    8700 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 4250 8700 4400
+Wire Wire Line
+	8700 4400 8850 4400
+Text Label 9550 4400 0    50   ~ 0
+MSW
+Wire Wire Line
+	9250 4400 9550 4400
+Text Notes 8600 3900 0    50   ~ 0
+Magnetic switch
+Text Label 7650 4800 2    50   ~ 0
+RST
+$Comp
+L Switch:SW_Push SW102
+U 1 1 5C50196A
+P 7850 4800
+F 0 "SW102" H 7850 4615 50  0000 C CNN
+F 1 "RESET" H 7850 4706 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 7850 5000 50  0001 C CNN
+F 3 "" H 7850 5000 50  0001 C CNN
+	1    7850 4800
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	8350 3950 8350 5100
+Wire Notes Line
+	8350 5100 7450 5100
+Wire Notes Line
+	7450 5100 7450 3950
+Wire Notes Line
+	7450 3950 8350 3950
+Wire Notes Line
+	8600 3950 9800 3950
+Wire Notes Line
+	9800 3950 9800 4550
+Wire Notes Line
+	9800 4550 8600 4550
+Wire Notes Line
+	8600 4550 8600 3950
+$EndSCHEMATC

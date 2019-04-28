@@ -1,5 +1,5 @@
 *.bak
 *.kicad_pcb-bak
-gerber/
-gerber.zip
-fp-info-cache
+pcb/gerber/
+pcb/gerber.zip
+pcb/fp-info-cache

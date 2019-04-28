@@ -1,0 +1,196 @@
+EESchema Schematic File Version 4
+LIBS:Door-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title "TPL5110 low power timer"
+Date "2019-04-27"
+Rev "1.2"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+3V3 #PWR0301
+U 1 1 5CB42607
+P 4150 3250
+F 0 "#PWR0301" H 4150 3100 50  0001 C CNN
+F 1 "+3V3" H 4165 3423 50  0000 C CNN
+F 2 "" H 4150 3250 50  0001 C CNN
+F 3 "" H 4150 3250 50  0001 C CNN
+	1    4150 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3550 5950 3550
+Wire Wire Line
+	4750 3750 4600 3750
+Wire Wire Line
+	4600 3750 4600 4000
+$Comp
+L Device:R R301
+U 1 1 5CB42D38
+P 4600 4300
+F 0 "R301" H 4670 4346 50  0000 L CNN
+F 1 "12K" H 4670 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4530 4300 50  0001 C CNN
+F 3 "~" H 4600 4300 50  0001 C CNN
+	1    4600 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4450 4600 4600
+Text HLabel 5950 3750 2    50   Input ~ 0
+DONE
+Text HLabel 4350 4000 0    50   Input ~ 0
+ENABLE
+Wire Wire Line
+	4350 4000 4600 4000
+Connection ~ 4600 4000
+Wire Wire Line
+	4600 4000 4600 4150
+$Comp
+L Device:C C301
+U 1 1 5CB3F474
+P 4400 3450
+F 0 "C301" H 4515 3496 50  0000 L CNN
+F 1 "0.1uF" H 4515 3405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4438 3300 50  0001 C CNN
+F 3 "~" H 4400 3450 50  0001 C CNN
+	1    4400 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3550 4750 3250
+Wire Wire Line
+	4150 3250 4400 3250
+Wire Wire Line
+	4100 3650 4400 3650
+Wire Wire Line
+	4400 3300 4400 3250
+Connection ~ 4400 3250
+Wire Wire Line
+	4400 3250 4750 3250
+Wire Wire Line
+	4400 3600 4400 3650
+Connection ~ 4400 3650
+Wire Wire Line
+	4400 3650 4750 3650
+$Comp
+L power:GND #PWR0304
+U 1 1 5CC54827
+P 6100 3550
+F 0 "#PWR0304" H 6100 3300 50  0001 C CNN
+F 1 "GND" H 6105 3377 50  0000 C CNN
+F 2 "" H 6100 3550 50  0001 C CNN
+F 3 "" H 6100 3550 50  0001 C CNN
+	1    6100 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0302
+U 1 1 5CC5493B
+P 4100 3650
+F 0 "#PWR0302" H 4100 3400 50  0001 C CNN
+F 1 "GND" H 4105 3477 50  0000 C CNN
+F 2 "" H 4100 3650 50  0001 C CNN
+F 3 "" H 4100 3650 50  0001 C CNN
+	1    4100 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0303
+U 1 1 5CC54AB5
+P 4600 4600
+F 0 "#PWR0303" H 4600 4350 50  0001 C CNN
+F 1 "GND" H 4605 4427 50  0000 C CNN
+F 2 "" H 4600 4600 50  0001 C CNN
+F 3 "" H 4600 4600 50  0001 C CNN
+	1    4600 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L custom:TPL5110 U301
+U 1 1 5CC54E39
+P 5350 3500
+F 0 "U301" H 5350 3815 50  0000 C CNN
+F 1 "TPL5110" H 5350 3724 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 5300 3050 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tpl5110.pdf" H 5350 2950 50  0001 C CNN
+	1    5350 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3650 6200 3650
+$Comp
+L Transistor_FET:IRLML6402 Q?
+U 1 1 5CC8AFB7
+P 6850 3650
+AR Path="/5CC8AFB7" Ref="Q?"  Part="1" 
+AR Path="/5CB41891/5CC8AFB7" Ref="Q301"  Part="1" 
+F 0 "Q301" H 7055 3696 50  0000 L CNN
+F 1 "IRLML6402" H 7055 3605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7050 3575 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 6850 3650 50  0001 L CNN
+	1    6850 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3300 7250 3300
+Wire Wire Line
+	6950 3450 6950 3300
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5CC8AFC0
+P 7600 4050
+AR Path="/5CC8AFC0" Ref="#PWR?"  Part="1" 
+AR Path="/5CB41891/5CC8AFC0" Ref="#PWR0305"  Part="1" 
+F 0 "#PWR0305" H 7600 3900 50  0001 C CNN
+F 1 "+3V3" H 7615 4223 50  0000 C CNN
+F 2 "" H 7600 4050 50  0001 C CNN
+F 3 "" H 7600 4050 50  0001 C CNN
+	1    7600 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5CC8AFC6
+P 7250 3300
+AR Path="/5CC8AFC6" Ref="#FLG?"  Part="1" 
+AR Path="/5CB41891/5CC8AFC6" Ref="#FLG0301"  Part="1" 
+F 0 "#FLG0301" H 7250 3375 50  0001 C CNN
+F 1 "PWR_FLAG" H 7250 3473 50  0000 C CNN
+F 2 "" H 7250 3300 50  0001 C CNN
+F 3 "~" H 7250 3300 50  0001 C CNN
+	1    7250 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 3300
+Wire Wire Line
+	7250 3300 7600 3300
+Wire Wire Line
+	6950 3850 6950 4050
+Wire Wire Line
+	6950 4050 7600 4050
+$Comp
+L Device:R R?
+U 1 1 5CC8AFD0
+P 6350 3650
+AR Path="/5CC8AFD0" Ref="R?"  Part="1" 
+AR Path="/5CB41891/5CC8AFD0" Ref="R302"  Part="1" 
+F 0 "R302" V 6143 3650 50  0000 C CNN
+F 1 "10K" V 6234 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6280 3650 50  0001 C CNN
+F 3 "~" H 6350 3650 50  0001 C CNN
+	1    6350 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 3650 6650 3650
+Text HLabel 7600 3300 2    50   Input ~ 0
+LOAD
+$EndSCHEMATC
